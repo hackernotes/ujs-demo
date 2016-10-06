@@ -1,0 +1,13 @@
+<li class="note" id="<%= dom_id(note) %>">
+  <div class="edit-controls">
+    <%= link_to note_path(note), remote: true, class: 'destroy-link', remote: true, data: {method: :delete} do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+    <%= link_to edit_note_path(note), remote: true, class: 'edit-link' do %>
+      <i class="fa fa-pencil"></i>
+    <% end %>
+  </div>
+  <div class="note-body">
+    <%= note.body %>
+  </div>
+</li>

@@ -1,0 +1,4 @@
+$('#notes').append($("<%= j render(@note) %>"))
+$('#note_body').val('')
+$('div.note_body').removeClass('has-error').find('.help-block').remove()
+$('#<%= dom_id(@note) %>').find('.note-body').effect('highlight', 800)

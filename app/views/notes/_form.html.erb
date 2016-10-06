@@ -1,0 +1,13 @@
+<%= simple_form_for (@note ||= Note.new), remote: true do |f| %>
+  <%= f.input :body, as: :string, label: false, placeholder: 'Enter your note' %>
+  <div class="update-links">
+    <%= button_tag type: :submit, class: 'btn btn-link submit-note pull-right' do %>
+      <i class="fa fa-check"></i>
+    <% end %>
+    <% if @note.persisted? %>
+      <%= link_to note_path(@note), remote: true, class: 'btn btn-link pull-right cancel-edit', title: 'Cancel edit', data: {toggle: 'tooltip'} do %>
+        <i class="fa fa-times"></i>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

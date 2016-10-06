@@ -1,0 +1,63 @@
+//= require_tree .
+//= require_self
+
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+@import 'font-awesome-sprockets'
+@import 'font-awesome'
+
+.container
+  margin-top: 50px
+
+h2
+  margin-bottom: 14px
+
+.note, 
+#new_note  
+  position: relative
+
+  .edit-controls,
+  .update-links
+    position: absolute
+    top: 16px
+
+    a, button
+      color: #666    
+
+  .edit-controls
+    position: absolute
+    left: 0
+    display: none
+
+    a.destroy-link
+      margin-right: 12px
+
+  .update-links
+    right: 0
+
+  &:hover
+    .edit-controls
+      display: block
+
+.form-group.string      
+  input
+    border: none
+    border-bottom: 1px solid #ccc
+    box-shadow: none
+    outline: none
+    border-radius: 0
+    padding-left: 0
+
+    &:focus
+      box-shadow: none
+
+.note
+  padding: 10px 0 10px 53px
+  margin-left: -58px
+
+  .note-body
+    padding: 5px
+
+#new_note  
+  padding: 15px 0  
+  margin-top: -15px
